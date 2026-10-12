@@ -1,8 +1,8 @@
 .dealership {
   width: 100%;
   padding: 100px 0;
-  background-color: #f8f4ef;
-  color: #3E2A21;
+  background-color: #F0F7FC;
+  color: #0A1F44;
 }
 
 .dealership-container {
@@ -14,7 +14,7 @@
 .dealership-container h2 {
   font-size: 2.6rem;
   font-weight: 700;
-  color: #5C4033;
+  color: #0A1F44;
   text-align: center;
   margin-bottom: 60px;
 }
@@ -28,18 +28,18 @@
 
 .info-card,
 .form-card {
-  background-color: #5C4033;
+  background-color: #0A1F44;
   border-radius: 16px;
   padding: 2.5rem 2rem;
   color: #ffffff;
-  box-shadow: 0 15px 40px rgba(62, 42, 33, 0.15);
+  box-shadow: 0 15px 40px rgba(10, 31, 68, 0.15);
 }
 
 .info-card h3,
 .form-card h3 {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #F4C430;
+  color: #00A8E8;
   margin-bottom: 1.4rem;
 }
 
@@ -58,14 +58,14 @@
   margin-bottom: 0.9rem;
   font-size: 1.02rem;
   line-height: 1.5;
-  color: #f0e6d8;
+  color: #B8D4E8;
 }
 
 .info-card li::before {
   content: '✓';
   position: absolute;
   left: 0;
-  color: #F4C430;
+  color: #00A8E8;
   font-weight: 700;
 }
 
@@ -93,7 +93,7 @@
 
 .form-group input:focus,
 .form-group textarea:focus {
-  border-color: #F4C430;
+  border-color: #00A8E8;
   background-color: rgba(255, 255, 255, 0.18);
 }
 
@@ -105,8 +105,8 @@
 .submit-btn {
   width: 100%;
   padding: 1rem;
-  background-color: #F4C430;
-  color: #3E2A21;
+  background-color: #00A8E8;
+  color: #ffffff;
   border: none;
   border-radius: 8px;
   font-size: 1.1rem;
@@ -117,9 +117,9 @@
 }
 
 .submit-btn:hover {
-  background-color: #e6b82e;
+  background-color: #0090C7;
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(244, 196, 48, 0.3);
+  box-shadow: 0 8px 20px rgba(0, 168, 232, 0.3);
 }
 
 @media (max-width: 900px) {

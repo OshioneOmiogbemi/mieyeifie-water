@@ -2,7 +2,7 @@
   width: 100%;
   padding: 100px 0;
   background-color: #ffffff;
-  color: #3E2A21;
+  color: #0A1F44;
 }
 
 .products-container {
@@ -15,7 +15,7 @@
 .products-container h2 {
   font-size: 2.6rem;
   font-weight: 700;
-  color: #5C4033;
+  color: #0A1F44;
   margin-bottom: 60px;
 }
 
@@ -26,41 +26,41 @@
 }
 
 .product-card {
-  background-color: #5C4033;
+  background-color: #0A1F44;
   border-radius: 16px;
   overflow: hidden;
   cursor: pointer;
   transition: all 0.35s ease;
-  box-shadow: 0 10px 30px rgba(62, 42, 33, 0.15);
+  box-shadow: 0 10px 30px rgba(10, 31, 68, 0.15);
   min-height: 380px;
   display: flex;
   flex-direction: column;
 }
 
 .product-card:hover {
-  background-color: #F4C430;
+  background-color: #00A8E8;
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(244, 196, 48, 0.25);
+  box-shadow: 0 20px 40px rgba(0, 168, 232, 0.25);
 }
 
 .product-card:hover h3,
 .product-card:hover .price,
 .product-card:hover .price span,
 .product-card:hover p {
-  color: #3E2A21;
+  color: #ffffff;
 }
 
 .product-card.selected {
-  background-color: #F4C430;
+  background-color: #00A8E8;
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(244, 196, 48, 0.3);
+  box-shadow: 0 20px 40px rgba(0, 168, 232, 0.3);
 }
 
 .product-card.selected h3,
 .product-card.selected .price,
 .product-card.selected .price span,
 .product-card.selected p {
-  color: #3E2A21;
+  color: #ffffff;
 }
 
 .product-image {
@@ -87,7 +87,7 @@
 .product-info h3 {
   font-size: 1.3rem;
   font-weight: 600;
-  color: #F4C430;
+  color: #00A8E8;
   margin-bottom: 0.6rem;
   transition: color 0.3s ease;
 }
@@ -117,7 +117,7 @@
 .wholesale-content h3 {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #F4C430;
+  color: #00A8E8;
   margin-bottom: 1.2rem;
   transition: color 0.3s ease;
 }
@@ -125,7 +125,7 @@
 .wholesale-content p {
   font-size: 1.05rem;
   line-height: 1.7;
-  color: #e8d9c8;
+  color: #B8D4E8;
   transition: color 0.3s ease;
 }
 

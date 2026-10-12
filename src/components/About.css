@@ -1,8 +1,8 @@
 .about {
   width: 100%;
   padding: 100px 0 120px;
-  background-color: #f8f4ef;
-  color: #3E2A21;
+  background-color: #F0F7FC;
+  color: #0A1F44;
   overflow: hidden;
 }
 
@@ -16,7 +16,7 @@
 .about-heading {
   font-size: 2.8rem;
   font-weight: 700;
-  color: #5C4033;
+  color: #0A1F44;
   margin-bottom: 70px;
   text-align: left;
   opacity: 0;
@@ -62,7 +62,7 @@
   position: absolute;
   width: 90%;
   height: 90%;
-  background-color: #5C4033;
+  background-color: #00A8E8;
   border-radius: 12px;
   z-index: 1;
 }
@@ -84,7 +84,7 @@
   object-fit: cover;
   border-radius: 12px;
   z-index: 2;
-  box-shadow: 0 15px 35px rgba(62, 42, 33, 0.18);
+  box-shadow: 0 15px 35px rgba(10, 31, 68, 0.18);
 }
 
 .about-image-wrapper.left img {
@@ -101,14 +101,14 @@
 .about-text h3 {
   font-size: 1.8rem;
   font-weight: 700;
-  color: #5C4033;
+  color: #0A1F44;
   margin-bottom: 1.2rem;
 }
 
 .about-text p {
   font-size: 1.05rem;
   line-height: 1.75;
-  color: #4a3728;
+  color: #1A3A5C;
   margin-bottom: 1.1rem;
 }
 

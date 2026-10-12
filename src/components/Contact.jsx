@@ -102,43 +102,47 @@ function Contact() {
             <h3>{t('connectWithUs')}</h3>
 
             <div className="social-links">
+              <a href="https://facebook.com" target="_blank" rel="noreferrer" className="social-item">
+                <span className="social-icon">FB</span>
+                <span>Facebook</span>
+              </a>
+
+              <a href="https://x.com" target="_blank" rel="noreferrer" className="social-item">
+                <span className="social-icon">X</span>
+                <span>X</span>
+              </a>
+
               <a href="https://instagram.com" target="_blank" rel="noreferrer" className="social-item">
                 <span className="social-icon">IG</span>
                 <span>Instagram</span>
-              </a>
-
-              <a href="https://wa.me/2348000000000" target="_blank" rel="noreferrer" className="social-item">
-                <span className="social-icon">WA</span>
-                <span>WhatsApp</span>
-              </a>
-
-              <a href="https://tiktok.com" target="_blank" rel="noreferrer" className="social-item">
-                <span className="social-icon">TT</span>
-                <span>TikTok</span>
               </a>
             </div>
 
             <div className="phone-box">
               <p>{t('callUs')}</p>
-              <a href="tel:+2348000000000">+234 800 000 0000</a>
+              <a href="tel:+2349116525040">+234 911 652 5040</a>
+              <br />
+              <a href="tel:+2347070923134">+234 707 092 3134</a>
             </div>
           </div>
 
           <div className="map-card">
             <h3>{t('ourLocations')}</h3>
             <div className="map-wrapper">
-              <iframe
-                title="Company Location"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.309!2d6.270!3d4.926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNMKwNTUnMzMuNiJOIDbCsDE2JzEyLjAiRQ!5e0!3m2!1sen!2sng!4v1710000000000"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen=""
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </div>
-            <p className="map-note">{t('factoryOutlet')}</p>
+  <iframe
+    title="Mieyeifie Table Water Location"
+    src="https://maps.google.com/maps?q=Bayelsa+Palm-Otuoke+New+Road,+Yenagoa,+Bayelsa+State,+Nigeria&t=&z=15&ie=UTF8&iwloc=&output=embed"
+    width="100%"
+    height="100%"
+    style={{ border: 0 }}
+    allowFullScreen=""
+    loading="lazy"
+    referrerPolicy="no-referrer-when-downgrade"
+  ></iframe>
+</div>
+<p className="map-note">
+  Along Bayelsa Palm-Otuoke New Road, Yenagoa, Bayelsa State 569101
+</p>
           </div>
         </div>
       </div>

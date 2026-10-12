@@ -8,10 +8,15 @@ function Footer() {
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-top">
+
           <div className="footer-brand">
-            <h3>MIEYEIFIE</h3>
+            <h3>Mieyeifie Table Water Global Concepts</h3>
             <p>
-              Delivering quality ozonized water and refreshing products across Bayelsa State and beyond.
+              Mieyeifietablewater.com offers high-quality table water solutions with a commitment to purity and freshness. Your health is our priority.
+            </p>
+            <p className="nafdac">
+              NAFDAC APPROVED<br />
+              REG. NO.: A1-111095
             </p>
           </div>
 
@@ -27,33 +32,37 @@ function Footer() {
           </div>
 
           <div className="footer-contact">
-            <h4>{t('contactUs')}</h4>
+            <h4>Contact</h4>
             <div className="contact-item">
-              <span className="icon">📞</span>
-              <a href="tel:+2348000000000">+234 800 000 0000</a>
+              <span>Along Bayelsa Palm-Otuoke New Road, Yenagoa, Bayelsa State 569101</span>
             </div>
             <div className="contact-item">
-              <span className="icon">📧</span>
-              <a href="mailto:info@yourcompany.com">info@yourcompany.com</a>
+              <span>Phone: </span>
+              <a href="tel:+2349116525040">+234 911 652 5040</a>
             </div>
             <div className="contact-item">
-              <span className="icon">📍</span>
-              <span>Yenagoa, Bayelsa State</span>
+              <span>Mobile: </span>
+              <a href="tel:+2347070923134">+234 707 092 3134</a>
+            </div>
+            <div className="contact-item">
+              <span>Email: </span>
+              <a href="mailto:info@mieyeifietablewater.com">info@mieyeifietablewater.com</a>
             </div>
           </div>
 
           <div className="footer-social">
-            <h4>{t('followUs')}</h4>
+            <h4>Social media</h4>
             <div className="social-icons">
+              <a href="https://facebook.com" target="_blank" rel="noreferrer" className="social-btn">FB</a>
+              <a href="https://x.com" target="_blank" rel="noreferrer" className="social-btn">X</a>
               <a href="https://instagram.com" target="_blank" rel="noreferrer" className="social-btn">IG</a>
-              <a href="https://wa.me/2348000000000" target="_blank" rel="noreferrer" className="social-btn">WA</a>
-              <a href="https://tiktok.com" target="_blank" rel="noreferrer" className="social-btn">TT</a>
             </div>
           </div>
+
         </div>
 
         <div className="footer-bottom">
-          <p>© {new Date().getFullYear()} MIEYEIFIE. {t('allRights')}</p>
+          <p>© {new Date().getFullYear()} Mieyeifie Table Water Global Concepts. {t('allRights')}</p>
         </div>
       </div>
     </footer>

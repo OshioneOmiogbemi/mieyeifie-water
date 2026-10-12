@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useLanguage } from '../context/LanguageContext'
+import logo from '../assets/images/mieyeifie.png'
 import './Navbar.css'
 
 function Navbar() {
@@ -39,14 +40,12 @@ function Navbar() {
     <nav className={scrolled ? 'navbar scrolled' : 'navbar'}>
       <div className="navbar-container">
 
-        {/* Logo */}
         <div className="logo">
           <a href="#home" onClick={closeMenu}>
-            MIEYEIFIE
+            <img src={logo} alt="Mieyeifie Logo" className="logo-img" />
           </a>
         </div>
 
-        {/* Desktop Navigation */}
         <ul className="nav-links">
           <li>
             <a href="#home">{t('home')}</a>
@@ -65,7 +64,6 @@ function Navbar() {
           </li>
         </ul>
 
-        {/* Language Selector */}
         <div className="lang-wrapper">
           <button
             className="lang-btn"
@@ -91,7 +89,6 @@ function Navbar() {
           )}
         </div>
 
-        {/* Mobile Hamburger */}
         <button
           className={`hamburger ${menuOpen ? 'active' : ''}`}
           onClick={() => setMenuOpen(!menuOpen)}
@@ -105,7 +102,6 @@ function Navbar() {
 
       </div>
 
-      {/* Mobile Menu */}
       <div className={`mobile-menu ${menuOpen ? 'open' : ''}`}>
         <a href="#home" onClick={closeMenu}>
           {t('home')}
@@ -123,7 +119,6 @@ function Navbar() {
           {t('contact')}
         </a>
 
-        {/* Mobile Language Selector */}
         <div className="mobile-language">
           <span>Language</span>
 

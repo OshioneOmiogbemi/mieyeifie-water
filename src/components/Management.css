@@ -1,7 +1,7 @@
 .management {
   width: 100%;
   padding: 100px 0;
-  background-color: #3E2A21;
+  background-color: #0A1F44;
   color: #ffffff;
   overflow: hidden;
 }
@@ -16,7 +16,7 @@
 .management-container h2 {
   font-size: 2.6rem;
   font-weight: 700;
-  color: #F4C430;
+  color: #00A8E8;
   margin-bottom: 60px;
 }
 
@@ -44,7 +44,7 @@
 
 .card {
   flex-shrink: 0;
-  background-color: #5C4033;
+  background-color: #123A6B;
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
@@ -69,12 +69,12 @@
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 0.35rem;
-  color: #F4C430;
+  color: #00A8E8;
 }
 
 .card-info p {
   font-size: 0.95rem;
-  color: #e8d9c8;
+  color: #B8D4E8;
   opacity: 0.9;
 }
 
@@ -102,9 +102,9 @@
   width: 52px;
   height: 52px;
   border-radius: 50%;
-  border: 2px solid #F4C430;
+  border: 2px solid #00A8E8;
   background-color: transparent;
-  color: #F4C430;
+  color: #00A8E8;
   font-size: 2rem;
   font-weight: 300;
   cursor: pointer;
@@ -117,8 +117,8 @@
 }
 
 .nav-btn:hover {
-  background-color: #F4C430;
-  color: #3E2A21;
+  background-color: #00A8E8;
+  color: #ffffff;
 }
 
 @media (max-width: 900px) {

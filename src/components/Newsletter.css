@@ -1,0 +1,144 @@
+.newsletter {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  overflow: hidden;
+  background-color: #0A1F44;
+}
+
+.newsletter-track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+  will-change: transform;
+}
+
+.newsletter-slide {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.newsletter-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(10, 31, 68, 0.82) 0%,
+    rgba(10, 31, 68, 0.55) 45%,
+    rgba(10, 31, 68, 0.25) 100%
+  );
+  display: flex;
+  align-items: center;
+}
+
+.newsletter-slide.right .newsletter-overlay {
+  background: linear-gradient(
+    to left,
+    rgba(10, 31, 68, 0.82) 0%,
+    rgba(10, 31, 68, 0.55) 45%,
+    rgba(10, 31, 68, 0.25) 100%
+  );
+  justify-content: flex-end;
+}
+
+.newsletter-content {
+  max-width: 480px;
+  padding: 0 3rem;
+  color: #ffffff;
+}
+
+.newsletter-slide.right .newsletter-content {
+  text-align: right;
+}
+
+.newsletter-date {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #00A8E8;
+  margin-bottom: 0.8rem;
+  letter-spacing: 0.5px;
+}
+
+.newsletter-content h3 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.newsletter-content p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #B8D4E8;
+  opacity: 0.95;
+}
+
+.newsletter-dots {
+  position: absolute;
+  bottom: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 5;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.35);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.dot.active {
+  background-color: #00A8E8;
+  transform: scale(1.25);
+}
+
+@media (max-width: 768px) {
+  .newsletter {
+    height: 380px;
+  }
+
+  .newsletter-content {
+    max-width: 100%;
+    padding: 0 1.8rem;
+  }
+
+  .newsletter-content h3 {
+    font-size: 1.55rem;
+  }
+
+  .newsletter-content p {
+    font-size: 0.98rem;
+  }
+
+  .newsletter-overlay,
+  .newsletter-slide.right .newsletter-overlay {
+    background: rgba(10, 31, 68, 0.78);
+    justify-content: center;
+  }
+
+  .newsletter-slide.right .newsletter-content {
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .newsletter {
+    height: 360px;
+  }
+
+  .newsletter-content h3 {
+    font-size: 1.35rem;
+  }
+}

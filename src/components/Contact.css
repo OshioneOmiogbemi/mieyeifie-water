@@ -2,7 +2,7 @@
   width: 100%;
   padding: 100px 0;
   background-color: #ffffff;
-  color: #3E2A21;
+  color: #0A1F44;
 }
 
 .contact-container {
@@ -14,7 +14,7 @@
 .contact-container h2 {
   font-size: 2.6rem;
   font-weight: 700;
-  color: #5C4033;
+  color: #0A1F44;
   text-align: center;
   margin-bottom: 60px;
 }
@@ -29,11 +29,11 @@
 .contact-form-card,
 .social-card,
 .map-card {
-  background-color: #5C4033;
+  background-color: #0A1F44;
   border-radius: 16px;
   padding: 2rem;
   color: #ffffff;
-  box-shadow: 0 15px 40px rgba(62, 42, 33, 0.12);
+  box-shadow: 0 15px 40px rgba(10, 31, 68, 0.12);
 }
 
 .contact-form-card h3,
@@ -41,7 +41,7 @@
 .map-card h3 {
   font-size: 1.4rem;
   font-weight: 700;
-  color: #F4C430;
+  color: #00A8E8;
   margin-bottom: 1.5rem;
 }
 
@@ -69,7 +69,7 @@
 
 .form-group input:focus,
 .form-group textarea:focus {
-  border-color: #F4C430;
+  border-color: #00A8E8;
   background-color: rgba(255, 255, 255, 0.18);
 }
 
@@ -81,8 +81,8 @@
 .submit-btn {
   width: 100%;
   padding: 0.95rem;
-  background-color: #F4C430;
-  color: #3E2A21;
+  background-color: #00A8E8;
+  color: #ffffff;
   border: none;
   border-radius: 8px;
   font-size: 1.05rem;
@@ -93,7 +93,7 @@
 }
 
 .submit-btn:hover {
-  background-color: #e6b82e;
+  background-color: #0090C7;
   transform: translateY(-2px);
 }
 
@@ -116,15 +116,15 @@
 }
 
 .social-item:hover {
-  background-color: #F4C430;
-  color: #3E2A21;
+  background-color: #00A8E8;
+  color: #ffffff;
 }
 
 .social-icon {
   width: 36px;
   height: 36px;
-  background-color: #F4C430;
-  color: #3E2A21;
+  background-color: #00A8E8;
+  color: #ffffff;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -134,8 +134,8 @@
 }
 
 .social-item:hover .social-icon {
-  background-color: #3E2A21;
-  color: #F4C430;
+  background-color: #0A1F44;
+  color: #00A8E8;
 }
 
 .phone-box {
@@ -147,14 +147,14 @@
 
 .phone-box p {
   font-size: 0.95rem;
-  color: #e8d9c8;
+  color: #B8D4E8;
   margin-bottom: 0.4rem;
 }
 
 .phone-box a {
   font-size: 1.25rem;
   font-weight: 700;
-  color: #F4C430;
+  color: #00A8E8;
   transition: color 0.3s ease;
 }
 
@@ -172,7 +172,7 @@
 
 .map-note {
   font-size: 0.95rem;
-  color: #e8d9c8;
+  color: #B8D4E8;
   text-align: center;
 }
 

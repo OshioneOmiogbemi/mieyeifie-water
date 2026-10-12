@@ -41,9 +41,9 @@
   height: 100%;
   background: linear-gradient(
     to right,
-    rgba(62, 42, 33, 0.85),
-    rgba(62, 42, 33, 0.7),
-    rgba(62, 42, 33, 0.85)
+    rgba(10, 31, 68, 0.85),
+    rgba(10, 31, 68, 0.7),
+    rgba(10, 31, 68, 0.85)
   );
   display: flex;
   align-items: center;
@@ -67,7 +67,7 @@
 .stat-block h3 {
   font-size: 2.4rem;
   font-weight: 700;
-  color: #F4C430;
+  color: #00A8E8;
   margin-bottom: 0.5rem;
   letter-spacing: 1px;
 }
@@ -75,7 +75,7 @@
 .stat-block p {
   font-size: 1.05rem;
   line-height: 1.5;
-  color: #f0e6d8;
+  color: #B8D4E8;
   opacity: 0.95;
   max-width: 260px;
   margin: 0 auto;
@@ -143,28 +143,5 @@
 
   .stat-block p {
     font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 650px) {
-  .production {
-    min-height: 330px;
-    padding: 55px 0;
-  }
-
-  .production-content {
-    grid-template-columns: 1fr;
-    gap: 28px;
-    padding: 0 1.2rem;
-  }
-
-  .stat-block h3 {
-    font-size: 2rem;
-    margin-bottom: 0.25rem;
-  }
-
-  .stat-block p {
-    font-size: 0.95rem;
-    max-width: 240px;
   }
 }

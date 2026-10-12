@@ -7,16 +7,16 @@
 .business-hours-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 1.5rem;
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1.8rem;
 }
 
 .hours-icon {
   flex-shrink: 0;
-  width: 42px;
-  height: 42px;
+  width: 40px;
+  height: 40px;
   color: #00A8E8;
 }
 
@@ -29,8 +29,7 @@
   display: flex;
   flex: 1;
   justify-content: space-between;
-  gap: 1rem;
-  overflow-x: auto;
+  gap: 0.8rem;
 }
 
 .hours-item {
@@ -38,19 +37,20 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  min-width: 90px;
+  min-width: 0;
 }
 
 .hours-day {
-  font-size: 0.78rem;
+  font-size: 0.75rem;
   font-weight: 700;
   color: #0A1F44;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.4px;
   margin-bottom: 4px;
+  white-space: nowrap;
 }
 
 .hours-time {
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   color: #1A3A5C;
   white-space: nowrap;
 }
@@ -60,6 +60,7 @@
   font-weight: 600;
 }
 
+
 @media (max-width: 900px) {
   .business-hours-container {
     flex-direction: column;
@@ -68,18 +69,39 @@
 
   .hours-list {
     width: 100%;
+    overflow-x: auto;
     justify-content: flex-start;
-    padding-bottom: 6px;
+    padding-bottom: 8px;
+    gap: 1.4rem;
+  }
+
+  .hours-item {
+    min-width: 95px;
   }
 }
+
 
 @media (max-width: 600px) {
   .business-hours {
     padding: 22px 0;
   }
 
+  .business-hours-container {
+    padding: 0 1rem;
+  }
+
+  .hours-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px 10px;
+    overflow-x: visible;
+  }
+
   .hours-item {
-    min-width: 80px;
+    min-width: 0;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 8px;
+    padding: 10px 6px;
   }
 
   .hours-day {
@@ -87,6 +109,14 @@
   }
 
   .hours-time {
-    font-size: 0.8rem;
+    font-size: 0.78rem;
+  }
+}
+
+
+@media (max-width: 380px) {
+  .hours-list {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 8px;
   }
 }

@@ -134,8 +134,8 @@ function Contact() {
             <h3>{t('ourLocations')}</h3>
             <div className="map-wrapper">
               <iframe
-                title="Mieyeifie Table Water Location"
-                src="https://maps.google.com/maps?q=Bayelsa+Palm-Otuoke+New+Road,+Yenagoa,+Bayelsa+State,+Nigeria&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                title="Mieyeifie Sales Outlet"
+                src="https://maps.google.com/maps?q=No.+45,+Customs+Road,+Biogbolo,+Yenagoa,+Bayelsa+State,+Nigeria&t=&z=16&ie=UTF8&iwloc=&output=embed"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -145,7 +145,7 @@ function Contact() {
               ></iframe>
             </div>
             <p className="map-note">
-              Along Bayelsa Palm-Otuoke New Road, Yenagoa, Bayelsa State 569101
+              Sales Outlet: No. 45, Customs Road, Biogbolo, Yenagoa, Bayelsa State
             </p>
           </div>
         </div>

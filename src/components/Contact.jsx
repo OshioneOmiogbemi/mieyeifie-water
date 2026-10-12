@@ -19,8 +19,12 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log('Contact form:', formData)
-    alert('Message sent successfully! We will get back to you soon.')
+
+    const message = `Hello Mieyeifie!%0A%0A*New Contact Message*%0A%0A*Name:* ${formData.name}%0A*Email:* ${formData.email}%0A*Phone:* ${formData.phone || 'Not provided'}%0A*Subject:* ${formData.subject || 'No subject'}%0A%0A*Message:*%0A${formData.message}`
+
+    const whatsappNumber = '2349116525040'
+    window.open(`https://wa.me/${whatsappNumber}?text=${message}`, '_blank')
+
     setFormData({
       name: '',
       email: '',
@@ -129,20 +133,20 @@ function Contact() {
           <div className="map-card">
             <h3>{t('ourLocations')}</h3>
             <div className="map-wrapper">
-  <iframe
-    title="Mieyeifie Table Water Location"
-    src="https://maps.google.com/maps?q=Bayelsa+Palm-Otuoke+New+Road,+Yenagoa,+Bayelsa+State,+Nigeria&t=&z=15&ie=UTF8&iwloc=&output=embed"
-    width="100%"
-    height="100%"
-    style={{ border: 0 }}
-    allowFullScreen=""
-    loading="lazy"
-    referrerPolicy="no-referrer-when-downgrade"
-  ></iframe>
-</div>
-<p className="map-note">
-  Along Bayelsa Palm-Otuoke New Road, Yenagoa, Bayelsa State 569101
-</p>
+              <iframe
+                title="Mieyeifie Table Water Location"
+                src="https://maps.google.com/maps?q=Bayelsa+Palm-Otuoke+New+Road,+Yenagoa,+Bayelsa+State,+Nigeria&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+            <p className="map-note">
+              Along Bayelsa Palm-Otuoke New Road, Yenagoa, Bayelsa State 569101
+            </p>
           </div>
         </div>
       </div>

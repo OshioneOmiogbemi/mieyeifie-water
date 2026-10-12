@@ -7,6 +7,7 @@ import Production from './components/Production'
 import Newsletter from './components/Newsletter'
 import Dealership from './components/Dealership'
 import Contact from './components/Contact'
+import BusinessHours from './components/BusinessHours'
 import Footer from './components/Footer'
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
       <Dealership />
       <Newsletter />
       <Contact />
+      <BusinessHours />
       <Footer />
     </>
   )

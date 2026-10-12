@@ -1,0 +1,92 @@
+.business-hours {
+  width: 100%;
+  background-color: #E8F4FC;
+  padding: 28px 0;
+}
+
+.business-hours-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.hours-icon {
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  color: #00A8E8;
+}
+
+.hours-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.hours-list {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  gap: 1rem;
+  overflow-x: auto;
+}
+
+.hours-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-width: 90px;
+}
+
+.hours-day {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #0A1F44;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.hours-time {
+  font-size: 0.85rem;
+  color: #1A3A5C;
+  white-space: nowrap;
+}
+
+.hours-time.closed {
+  color: #e74c3c;
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .business-hours-container {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  .hours-list {
+    width: 100%;
+    justify-content: flex-start;
+    padding-bottom: 6px;
+  }
+}
+
+@media (max-width: 600px) {
+  .business-hours {
+    padding: 22px 0;
+  }
+
+  .hours-item {
+    min-width: 80px;
+  }
+
+  .hours-day {
+    font-size: 0.72rem;
+  }
+
+  .hours-time {
+    font-size: 0.8rem;
+  }
+}

@@ -17,7 +17,7 @@
 .sliding-image {
   width: 50%;
   height: 100%;
-  background-image: url('src/assets/images/production-bg.png');
+  background-image: url('/production-bg.png');   
   background-size: cover;
   background-position: center;
   animation: slideLeft 40s linear infinite;

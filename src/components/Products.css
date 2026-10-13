@@ -252,3 +252,64 @@
   background-color: #0090C7;
   transform: translateY(-2px);
 }
+
+.product-prices {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.product-price-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.product-size {
+  color: #00baff;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.product-price-item .price {
+  margin: 0;
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.product-price-item .price span {
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.form-group select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: inherit;
+  background: #fff;
+  color: #0b1f41;
+  outline: none;
+}
+
+.form-group select:focus {
+  border-color: #00baff;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+@media (max-width: 480px) {
+  .product-prices {
+    gap: 18px;
+  }
+}

@@ -47,6 +47,9 @@ function Dealership() {
               <li>{t('req4')}</li>
               <li>{t('req5')}</li>
               <li>{t('req6')}</li>
+              <li>{t('req7')}</li>
+              <li>{t('req8')}</li>
+              <li>{t('req9')}</li>
             </ul>
 
             <h3>{t('benefits')}</h3>
@@ -56,6 +59,9 @@ function Dealership() {
               <li>{t('ben3')}</li>
               <li>{t('ben4')}</li>
               <li>{t('ben5')}</li>
+              <li>{t('ben6')}</li>
+              <li>{t('ben7')}</li>
+              <li>{t('ben8')}</li>
             </ul>
           </div>
 

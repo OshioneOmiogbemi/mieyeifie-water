@@ -12,6 +12,7 @@ function Products() {
     name: '',
     phone: '',
     quantity: 1,
+    size: '75cl',
     address: '',
     notes: ''
   })
@@ -29,7 +30,10 @@ function Products() {
     {
       id: 2,
       name: 'Bottled Water (Packs)',
-      price: '₦1,500',
+      price: [
+        { size: '75cl', amount: 1500 },
+        { size: '50cl', amount: 1300 }
+      ],
       image: product2,
       type: 'regular'
     },
@@ -45,12 +49,23 @@ function Products() {
 
   const handleCardClick = (product) => {
     setSelected(product.id)
+
+    setOrderData((prev) => ({
+      ...prev,
+      size: '75cl',
+      quantity: 1
+    }))
+
     setShowOrder(true)
   }
 
   const handleChange = (e) => {
     const { name, value } = e.target
-    setOrderData((prev) => ({ ...prev, [name]: value }))
+
+    setOrderData((prev) => ({
+      ...prev,
+      [name]: value
+    }))
   }
 
   const handleSubmit = (e) => {
@@ -61,21 +76,56 @@ function Products() {
     let message = ''
 
     if (selectedProduct.type === 'regular') {
-      message = `Hello Mieyeifie!%0A%0AI would like to place an order:%0A%0A*Product:* ${selectedProduct.name}%0A*Price:* ${selectedProduct.price}%0A*Quantity:* ${orderData.quantity}%0A%0A*Name:* ${orderData.name}%0A*Phone:* ${orderData.phone}%0A*Delivery Address:* ${orderData.address}%0A*Notes:* ${orderData.notes || 'None'}`
+      const selectedPrice = Array.isArray(selectedProduct.price)
+        ? selectedProduct.price.find(
+            (item) => item.size === orderData.size
+          )
+        : null
+
+      const price = selectedPrice
+        ? `₦${selectedPrice.amount.toLocaleString()}`
+        : selectedProduct.price
+
+      message = `Hello Mieyeifie!
+
+I would like to place an order:
+
+Product: ${selectedProduct.name}
+${selectedPrice ? `Bottle Size: ${selectedPrice.size}\n` : ''}Price: ${price} per item
+Quantity: ${orderData.quantity}
+
+Name: ${orderData.name}
+Phone: ${orderData.phone}
+Delivery Address: ${orderData.address}
+Notes: ${orderData.notes || 'None'}`
     } else {
-      message = `Hello Mieyeifie!%0A%0AI am interested in wholesale supply:%0A%0A*Name:* ${orderData.name}%0A*Phone:* ${orderData.phone}%0A*Location / Address:* ${orderData.address}%0A*Estimated Quantity / Needs:* ${orderData.quantity || 'Not specified'}%0A*Additional Notes:* ${orderData.notes || 'None'}`
+      message = `Hello Mieyeifie!
+
+I am interested in wholesale supply:
+
+Name: ${orderData.name}
+Phone: ${orderData.phone}
+Location / Address: ${orderData.address}
+Estimated Quantity / Needs: ${orderData.quantity || 'Not specified'}
+Additional Notes: ${orderData.notes || 'None'}`
     }
 
     const whatsappNumber = '2349116525040'
-    window.open(`https://wa.me/${whatsappNumber}?text=${message}`, '_blank')
+
+    window.open(
+      `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`,
+      '_blank'
+    )
 
     setOrderData({
       name: '',
       phone: '',
       quantity: 1,
+      size: '75cl',
       address: '',
       notes: ''
     })
+
     setShowOrder(false)
     setSelected(null)
   }
@@ -94,7 +144,9 @@ function Products() {
           {products.map((product) => (
             <div
               key={product.id}
-              className={`product-card ${selected === product.id ? 'selected' : ''}`}
+              className={`product-card ${
+                selected === product.id ? 'selected' : ''
+              }`}
               onClick={() => handleCardClick(product)}
             >
               {product.type === 'regular' ? (
@@ -102,11 +154,34 @@ function Products() {
                   <div className="product-image">
                     <img src={product.image} alt={product.name} />
                   </div>
+
                   <div className="product-info">
                     <h3>{product.name}</h3>
-                    <p className="price">
-                      {product.price} <span>{t('perItem')}</span>
-                    </p>
+
+                    {Array.isArray(product.price) ? (
+                      <div className="product-prices">
+                        {product.price.map((item) => (
+                          <div
+                            className="product-price-item"
+                            key={item.size}
+                          >
+                            <span className="product-size">
+                              {item.size}
+                            </span>
+
+                            <p className="price">
+                              ₦{item.amount.toLocaleString()}
+                              <span>{t('perItem')}</span>
+                            </p>
+                          </div>
+                        ))}
+                      </div>
+                    ) : (
+                      <p className="price">
+                        {product.price}{' '}
+                        <span>{t('perItem')}</span>
+                      </p>
+                    )}
                   </div>
                 </>
               ) : (
@@ -119,11 +194,20 @@ function Products() {
           ))}
         </div>
 
-        {/* Order / Inquiry Modal */}
         {showOrder && selectedProduct && (
-          <div className="order-modal-overlay" onClick={closeOrder}>
-            <div className="order-modal" onClick={(e) => e.stopPropagation()}>
-              <button className="order-close" onClick={closeOrder}>
+          <div
+            className="order-modal-overlay"
+            onClick={closeOrder}
+          >
+            <div
+              className="order-modal"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                className="order-close"
+                onClick={closeOrder}
+                type="button"
+              >
                 ×
               </button>
 
@@ -134,7 +218,50 @@ function Products() {
               </h3>
 
               {selectedProduct.type === 'regular' && (
-                <p className="order-price">{selectedProduct.price} each</p>
+                <>
+                  {Array.isArray(selectedProduct.price) ? (
+                    <>
+                      <div className="form-group">
+                        <label htmlFor="size">
+                          Select Bottle Size
+                        </label>
+
+                        <select
+                          id="size"
+                          name="size"
+                          value={orderData.size}
+                          onChange={handleChange}
+                          required
+                        >
+                          {selectedProduct.price.map((item) => (
+                            <option
+                              key={item.size}
+                              value={item.size}
+                            >
+                              {item.size} - ₦
+                              {item.amount.toLocaleString()}
+                            </option>
+                          ))}
+                        </select>
+                      </div>
+
+                      <p className="order-price">
+                        ₦
+                        {(
+                          selectedProduct.price.find(
+                            (item) =>
+                              item.size === orderData.size
+                          )?.amount || 0
+                        ).toLocaleString()}{' '}
+                        each
+                      </p>
+                    </>
+                  ) : (
+                    <p className="order-price">
+                      {selectedProduct.price} each
+                    </p>
+                  )}
+                </>
               )}
 
               <form onSubmit={handleSubmit}>

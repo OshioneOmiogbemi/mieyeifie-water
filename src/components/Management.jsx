@@ -31,7 +31,7 @@ const team = [
   },
   {
     name: 'Tamar',
-    position: 'Sales Representative',
+    position: 'Cashier',
     image: operations
   }
 ]

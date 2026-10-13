@@ -9,7 +9,7 @@ const slides = [
   {
     image: news1,
     title: 'SON Factory Inspection',
-    text: 'Last week Thursday, officials from the Standards Organisation of Nigeria (SON) visited our factory for a comprehensive quality inspection. We are proud to continue meeting the highest national standards for table water production.',
+    text: 'on October 8, 2026, officials from the Standards Organisation of Nigeria (SON) visited our factory for a comprehensive quality inspection. We are proud to continue meeting the highest national standards for table water production.',
     date: 'October 8, 2026',
     side: 'left'
   },

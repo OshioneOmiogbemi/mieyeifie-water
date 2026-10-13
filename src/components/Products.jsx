@@ -31,8 +31,8 @@ function Products() {
       id: 2,
       name: 'Bottled Water (Packs)',
       price: [
-        { size: '75cl', amount: 1500 },
-        { size: '50cl', amount: 1300 }
+        { size: '75cl', amount: 2700 },
+        { size: '50cl', amount: 2500 }
       ],
       image: product2,
       type: 'regular'

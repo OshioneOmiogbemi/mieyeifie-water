@@ -1,4 +1,5 @@
 import { useLanguage } from '../context/LanguageContext'
+import sonLogo from '../assets/images/son.jpg'
 import './Footer.css'
 
 function Footer() {
@@ -9,16 +10,28 @@ function Footer() {
       <div className="footer-container">
         <div className="footer-top">
 
-          <div className="footer-brand">
-            <h3>Mieyeifie Table Water Global Concepts</h3>
-            <p>
-              Mieyeifietablewater.com offers high-quality table water solutions with a commitment to purity and freshness. Your health is our priority.
-            </p>
-            <p className="nafdac">
-              NAFDAC APPROVED<br />
-              REG. NO.: A1-111095
-            </p>
-          </div>
+         <div className="footer-brand">
+  <h3>Mieyeifie Table Water Global Concepts</h3>
+  <p>
+    Mieyeifietablewater.com offers high-quality table water solutions with a commitment to purity and freshness. Your health is our priority.
+  </p>
+
+  <div className="footer-certs">
+    <p className="nafdac">
+      NAFDAC APPROVED<br />
+      REG. NO.: A1-111095
+    </p>
+
+    <span className="cert-divider" aria-hidden="true" />
+
+    <img
+      src={sonLogo}
+      alt="Approved by the Standards Organisation of Nigeria (SON)"
+      className="son-logo"
+      loading="lazy"
+    />
+  </div>
+</div>
 
           <div className="footer-links">
             <h4>{t('quickLinks')}</h4>

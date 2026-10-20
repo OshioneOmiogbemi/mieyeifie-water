@@ -146,3 +146,33 @@
   color: #00A8E8;
   line-height: 1.5;
 }
+
+.footer-certs {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-certs .nafdac {
+  margin: 0;
+}
+
+.cert-divider {
+  width: 1px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.son-logo {
+  height: 56px;
+  width: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .cert-divider {
+    display: none;
+  }
+}

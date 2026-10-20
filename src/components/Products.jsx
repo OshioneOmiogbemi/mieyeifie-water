@@ -33,7 +33,7 @@ function Products() {
       name: 'Bottled Water (Packs)',
       price: [
         { size: '75cl', amount: 1900, unit: 'per pack' },
-        { size: '50cl', amount: 1600, unit: 'per pack' },
+        { size: '50cl', amount: 1700, unit: 'per pack' },
         { size: '35cl', amount: 2900, unit: 'per pack (20 pcs)' }
       ],
       image: product2,

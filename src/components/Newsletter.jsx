@@ -14,12 +14,13 @@ const slides = [
     side: 'left'
   },
   {
-    image: news2,
-    title: 'Mieyeifie Water at Bayelsa @ 30 Dinner',
-    text: 'Our water was proudly served at the Bayelsa @ 30 anniversary dinner, which brought together top Bayelsa State officials, leaders, and other distinguished allies in celebration of the state’s 30th anniversary.',
-    date: '2026',
-    side: 'right'
-  },
+  image: news2,
+  title: 'Mieyeifie Water at Bayelsa @ 30 Dinner',
+  text: 'Our water was proudly served at the Bayelsa @ 30 anniversary dinner, which brought together top Bayelsa State officials, leaders, and other distinguished allies in celebration of the state’s 30th anniversary.',
+  date: '2026',
+  side: 'right',
+  fit: 'contain'
+},
   {
    image: news3,
     title: 'Delivery to the Outskirts of Bayelsa',
@@ -45,10 +46,13 @@ function Newsletter() {
       <div className="newsletter-track" style={{ transform: `translateX(-${current * 100}%)` }}>
         {slides.map((slide, index) => (
           <div
-            key={index}
-            className={`newsletter-slide ${slide.side}`}
-            style={{ backgroundImage: `url(${slide.image})` }}
-          >
+  key={index}
+  className={`newsletter-slide ${slide.side} ${slide.fit === 'contain' ? 'fit-contain' : ''}`}
+  style={{
+    backgroundImage: `url(${slide.image})`,
+    '--slide-img': `url(${slide.image})`
+  }}
+>
             <div className="newsletter-overlay">
               <div className="newsletter-content">
                 <span className="newsletter-date">{slide.date}</span>

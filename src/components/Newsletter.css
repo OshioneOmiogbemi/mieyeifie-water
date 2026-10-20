@@ -142,3 +142,39 @@
     font-size: 1.35rem;
   }
 }
+
+.newsletter-slide {
+  position: relative;
+  isolation: isolate;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.newsletter-slide.fit-contain {
+  background-image: none !important;
+  overflow: hidden;
+}
+
+.newsletter-slide.fit-contain::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background-image: var(--slide-img);
+  background-size: cover;
+  background-position: center;
+  filter: blur(28px) brightness(0.6);
+  transform: scale(1.15);
+}
+
+.newsletter-slide.fit-contain::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: var(--slide-img);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}

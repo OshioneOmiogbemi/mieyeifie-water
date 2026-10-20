@@ -1,42 +1,44 @@
-import { useState, useEffect } from 'react'
 import { useLanguage } from '../context/LanguageContext'
 import './Hero.css'
 
-import hero1 from '../assets/images/hero1.png'
-import hero2 from '../assets/images/hero2.png'
-import hero3 from '../assets/images/backup1.png'
-
-const images = [hero1, hero2, hero3]
+import heroVideo from '../assets/images/mieyeifiead.mp4'
 
 function Hero() {
-  const [current, setCurrent] = useState(0)
   const { t } = useLanguage()
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrent((prev) =>
-        prev === images.length - 1 ? 0 : prev + 1
-      )
-    }, 5000)
-
-    return () => clearInterval(interval)
-  }, [])
 
   return (
     <section className="hero" id="home">
-      {images.map((img, index) => (
-        <div
-          key={index}
-          className={index === current ? 'slide active' : 'slide'}
-          style={{ backgroundImage: `url(${img})` }}
-        />
-      ))}
+      {/* Backdrop: same video, blurred, fills the screen */}
+      <video
+        className="hero-bg-video"
+        src={heroVideo}
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+        aria-hidden="true"
+      />
 
       <div className="hero-overlay" />
 
-      <div className="hero-content">
-        <h1>{t('welcome')}</h1>
-        <p>{t('tagline')}</p>
+      <div className="hero-inner">
+        <div className="hero-content">
+          <h1>{t('welcome')}</h1>
+          <p>{t('tagline')}</p>
+        </div>
+
+        {/* Sharp, uncropped vertical video (desktop/landscape only) */}
+        <div className="hero-video-frame">
+          <video
+            src={heroVideo}
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+          />
+        </div>
       </div>
     </section>
   )

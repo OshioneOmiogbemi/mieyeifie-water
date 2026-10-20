@@ -32,7 +32,6 @@ function Navbar() {
 
   const langLabel = {
     en: 'EN',
-    ij: 'IJ',
     fr: 'FR'
   }
 
@@ -69,17 +68,13 @@ function Navbar() {
             className="lang-btn"
             onClick={() => setOpenLang(!openLang)}
           >
-            {langLabel[language]}
+            {langLabel[language] || 'EN'}
           </button>
 
           {openLang && (
             <div className="lang-dropdown">
               <button onClick={() => changeLanguage('en')}>
                 English
-              </button>
-
-              <button onClick={() => changeLanguage('ij')}>
-                Ijaw
               </button>
 
               <button onClick={() => changeLanguage('fr')}>
@@ -128,13 +123,6 @@ function Navbar() {
               onClick={() => changeLanguage('en')}
             >
               EN
-            </button>
-
-            <button
-              className={language === 'ij' ? 'active-lang' : ''}
-              onClick={() => changeLanguage('ij')}
-            >
-              IJ
             </button>
 
             <button

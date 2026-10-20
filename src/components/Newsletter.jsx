@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import './Newsletter.css'
 
-import news1 from '../assets/images/news1.png'   // replace with your images
+import news1 from '../assets/images/news1.png'  
 import news2 from '../assets/images/news2.png'
 import news3 from '../assets/images/hero3.png'
 

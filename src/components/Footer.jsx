@@ -13,7 +13,7 @@ function Footer() {
          <div className="footer-brand">
   <h3>Mieyeifie Table Water Global Concepts</h3>
   <p>
-    Mieyeifietablewater.com offers high-quality table water solutions with a commitment to purity and freshness. Your health is our priority.
+    mieyeifietablewater.com offers high-quality table water solutions with a commitment to purity and freshness. Your health is our priority.
   </p>
 
   <div className="footer-certs">
@@ -47,7 +47,7 @@ function Footer() {
           <div className="footer-contact">
             <h4>Contact</h4>
             <div className="contact-item">
-              <span>Along Bayelsa Palm-Otuoke New Road, Yenagoa, Bayelsa State 569101</span>
+              <span>No. 45, Customs Road, Biogbolo, Yenagoa, Bayelsa State</span>
             </div>
             <div className="contact-item">
               <span>Phone: </span>
